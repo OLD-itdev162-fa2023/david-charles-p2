@@ -48,6 +48,11 @@ namespace API.Controllers
             return Ok(post);
         }
 
+        /// <summary>
+        /// PUT api/post
+        /// </summary>
+        /// <param name="request">JSON request containing on or more updated post fields</param>
+        /// <returns></returns>
         [HttpPost(Name = "Create")]
         public ActionResult<Post> Create([FromBody]Post request)
         {

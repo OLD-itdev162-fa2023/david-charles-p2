@@ -18,7 +18,7 @@ export class ViewPostComponent implements OnInit {
 
   getPost(){
     let id = this.route.snapshot.paramMap.get('id');
-    this.http.get(`http://localhost:5223/api/posts/${id}`).subscribe(post => {
+    this.http.get(`http://localhost:5230/api/posts/${id}`).subscribe(post => {
       this.post = post;
     });
   }

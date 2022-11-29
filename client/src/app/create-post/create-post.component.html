@@ -1,7 +1,7 @@
 <form #createPostForm ="ngForm" (ngSubmit)="createPost()" class="post-form">
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Title</mat-label>
-        <input matInput name="title" [(ngModel)]="model.body" placeholder="Title">
+        <input matInput name="title" [(ngModel)]="model.title" placeholder="Title">
     </mat-form-field>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Body</mat-label>

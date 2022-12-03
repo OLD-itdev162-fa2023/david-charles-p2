@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-post',
@@ -6,10 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-post.component.css']
 })
 export class SearchPostComponent implements OnInit {
-
-  constructor() { }
+  post: any = {}
+  id;
+  
+  constructor(
+    private http: HttpClient,
+    private route: Router) {}
 
   ngOnInit(): void {
+
+  }
+
+
+  cancel() {
+    this.home();
+  }
+
+  home() {
+    this.route.navigate(["/"]);
+  }
+
+
+
+  getPost(){
+    let id = '01be19f3-dd53-43c7-9b50-1bf0c4fb5dfa';
+    this.http.get(`http://localhost:5230/api/posts/${id}`).subscribe(post => {
+      this.post = post;
+    });
   }
 
 }

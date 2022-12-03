@@ -1,1 +1,12 @@
-<p>search-post works!</p>
+<form #createPostForm="ngForm" (ngSubmit)="getPost()" class="search-form">
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>ID</mat-label>
+        <input id="idInput" matInput name="title" [(ngModel)]="post.id" placeholder="Enter ID">
+    </mat-form-field>
+    <div class="form-field">
+        <button mat-raised-button color="primary" type="submit" class="form-button" (click)="getPost()">Search</button>
+        <button mat-raised-button color="primary" type="button" class="form-button" (click)="cancel()">Cancel</button>
+    </div>
+
+
+</form>

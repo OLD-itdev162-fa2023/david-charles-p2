@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPostComponent } from './search-post/search-post.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     ViewPostComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    SearchPostComponent
   ],
   imports: [
     BrowserModule,

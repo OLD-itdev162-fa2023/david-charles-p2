@@ -31,8 +31,9 @@ export class SearchPostComponent implements OnInit {
 
 
   getPost(){
-    let id = '01be19f3-dd53-43c7-9b50-1bf0c4fb5dfa';
-    this.route.navigate(["/posts/"+ id])
+    //let id = '01be19f3-dd53-43c7-9b50-1bf0c4fb5dfa';
+    let id = this.post.id;
+    this.route.navigate(["/posts/"+ id]);
   }
 
 }

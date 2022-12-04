@@ -32,9 +32,7 @@ export class SearchPostComponent implements OnInit {
 
   getPost(){
     let id = '01be19f3-dd53-43c7-9b50-1bf0c4fb5dfa';
-    this.http.get(`http://localhost:5230/api/posts/${id}`).subscribe(post => {
-      this.post = post;
-    });
+    this.route.navigate(["/posts/"+ id])
   }
 
 }
